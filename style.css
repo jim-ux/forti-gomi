@@ -130,6 +130,7 @@ header{
 		align-items: center;
 
 		& img{
+			width: 20%;
 			animation: float 5s infinite ease-in-out alternate;
 		}
 	}
