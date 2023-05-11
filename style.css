@@ -1,0 +1,214 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	scroll-behavior: smooth;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none; /* no underline */
+  }
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+/* Class */
+.h-screen{
+	height: 100vh;
+}
+
+.container{
+	width: 80%;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.head-1{
+	font-weight: 700;
+	font-size: 4rem;
+	color: white;
+}
+
+.paragraph{
+	margin-top: 30px;
+	font-size: 1.3rem;
+	color: white;
+}
+
+.flex-column-center{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Navigation */
+
+header{
+	
+	display:flex;
+	flex-direction: column;
+
+	& nav{
+		height: 100px;
+		
+		& ul{
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			gap: 50px;
+
+			& li{
+
+				& a{
+					font-size: 1.3rem;
+					color: #82117C	;
+					font-weight: 700;
+					padding: 10px 30px;
+					border-radius: 40px;
+					transition: all ease-in-out 250ms;
+
+					&:hover{
+						background: #82117C;
+						color:white
+					}
+				}
+
+			}
+		}
+	}
+
+	& .main-content{
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& img{
+			animation: float 5s infinite ease-in-out alternate;
+		}
+	}
+}
+
+@keyframes float {
+	0%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(50px);
+	}
+	
+}
+
+#mision{
+	background-color: #EA5B0C;
+
+	& div{
+		width: 45%;
+		
+	}
+
+	
+}
+
+#vision{
+	background-color: #0BB2BB;
+
+	& div{
+		width: 45%;
+	}
+}
+
+#valores{
+	background-color: #FEC41A;
+	box-sizing: border-box;
+
+	& .container{
+
+
+
+		& ul{
+			& li{
+				& h2{
+					font-size: 2rem;
+					margin: 20px 0px 
+				}
+			}
+		}
+	}
+
+	& div{
+		width: 45%;
+	}
+}
+
+
+@media screen and (max-width: 625px) {
+
+	header .main-content img{
+			
+			width: 80%;
+		
+	}
+
+	nav {
+		display: none;
+	}
+
+	#mision, #vision, #valores{
+	
+		& div{
+			width: 80%;
+			
+		}
+	
+		
+	}
+}
+
+
